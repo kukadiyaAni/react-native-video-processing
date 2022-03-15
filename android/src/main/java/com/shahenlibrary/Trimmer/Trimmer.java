@@ -295,7 +295,8 @@ public class Trimmer {
 
     ArrayList<String> cmd = new ArrayList<String>();
     cmd.add("-y"); // NOTE: OVERWRITE OUTPUT FILE
-
+    cmd.add("-ss");
+    cmd.add(startTime);
     // NOTE: INPUT FILE
     cmd.add("-i");
     cmd.add(source);
@@ -306,8 +307,7 @@ public class Trimmer {
     // 3. "-to" (END TIME) or "-t" (TRIM TIME)
     // OTHERWISE WE WILL LOSE ACCURACY AND WILL GET WRONG CLIPPED VIDEO
 
-    cmd.add("-ss");
-    cmd.add(startTime);
+   
 
     cmd.add("-to");
     cmd.add(endTime);
